@@ -6,4 +6,4 @@ COPY ./target/java-maven-app-*.jar .
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "java-maven-app-*.jar"]
+ENTRYPOINT ["java", "-jar", "java-maven-app-1.0-SNAPSHOT.jar"]
