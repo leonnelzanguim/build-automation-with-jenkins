@@ -23,10 +23,12 @@ pipeline {
         }
       }
     }
-    stage("build Image") {
+    stage("build and Push Image") {
       steps {
         script {
-          buildImage '10012975/demo-java-maven-app:4.0'
+          buildImage '10012975/demo-java-maven-app:5.0'
+          dockerLogin()
+          dockerPush '10012975/demo-java-maven-app:5.0'
         }
       }
     }
